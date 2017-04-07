@@ -1,23 +1,18 @@
-const msgIdRe = /(%[A-Za-z0-9\/+]{43}=\.sha256)/g
+const Transform = require('./transform')
 
 module.exports = {
   hooks: {
     'init': function() {
       var options = this.config.get('pluginsConfig')['ssb'] || {}
-      console.log('init', options)
+      // TODO initialize transformer here
     },
     'page:before': function (page) {
-      var options = this.config.get('pluginsConfig')['ssb'] || {}
-      page.content = linkMessageIdsToViewer(page.content, options.viewer)
+      const options = this.config.get('pluginsConfig')['ssb'] || {}
+      const transform = Transform(options)
+      page.content = transform(page.content)
       return page
     }
   },
   blocks: {},
   filters: {}
-}
-
-function linkMessageIdsToViewer (text, viewer) {
-  return text.replace(msgIdRe, (match, id, offset, string) => {
-    return `[${id}](${viewer}/${encodeURIComponent(id)})`
-  })
 }

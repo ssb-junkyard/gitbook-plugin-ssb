@@ -44,5 +44,9 @@
     "standard": "^8.6.0",
     "tape": "^4.6.3"
   },
-  "dependencies": {}
+  "dependencies": {
+    "remark": "^7.0.0",
+    "ssb-ref": "^2.6.2",
+    "unist-util-map": "^1.0.3"
+  }
 }
