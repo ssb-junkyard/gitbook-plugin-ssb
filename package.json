@@ -1,6 +1,6 @@
 {
   "name": "gitbook-plugin-ssb",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "GitBook plugin for Secure Scuttlebutt formatting",
   "main": "index.js",
   "scripts": {
@@ -16,13 +16,13 @@
     "gitbook": "3.x.x"
   },
   "gitbook": {
-     "properties": {
-        "viewer": {
-          "type": "string",
-          "default": "https://viewer.scuttlebot.io",
-          "description": "A url to an ssb viewer!"
-        }
+    "properties": {
+      "viewer": {
+        "type": "string",
+        "default": "https://viewer.scuttlebot.io",
+        "description": "A url to an ssb viewer!"
       }
+    }
   },
   "repository": {
     "type": "git",
@@ -44,6 +44,5 @@
     "standard": "^8.6.0",
     "tape": "^4.6.3"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
