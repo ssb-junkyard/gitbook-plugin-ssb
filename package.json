@@ -1,6 +1,6 @@
 {
   "name": "gitbook-plugin-ssb",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "GitBook plugin for Secure Scuttlebutt formatting",
   "main": "index.js",
   "scripts": {
